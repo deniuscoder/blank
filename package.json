@@ -1,0 +1,24 @@
+{
+  "name": "blank",
+  "version": "1.0.0",
+  "description": "The empty project for web development",
+  "main": "index.js",
+  "scripts": {
+    "test": "Hello world"
+  },
+  "repository": {
+    "type": "git",
+    "url": "blank"
+  },
+  "author": "Denius Coder",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-csso": "^2.0.0",
+    "gulp-if": "^2.0.1",
+    "gulp-server-livereload": "^1.9.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.1.2"
+  }
+}
