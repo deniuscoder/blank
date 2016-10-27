@@ -1,11 +1,11 @@
 var gulp = require('gulp');
 var server = require('gulp-server-livereload');
-//var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var useref = require('gulp-useref');
 var gulpif = require('gulp-if');
 var uglify = require('gulp-uglify');
 var csso = require('gulp-csso');
+var image = require('gulp-image');
 
 // server
 gulp.task('start', function() {
@@ -16,19 +16,26 @@ gulp.task('start', function() {
     }));
 });
 
+// image
+gulp.task('image', function () {
+  gulp.src('app/images/*')
+    .pipe(image())
+    .pipe(gulp.dest('public/images'));
+});
+
 // styles
 gulp.task('style', function () {
-  return gulp.src('app/sass/**/*.css')
+  return gulp.src('app/noprefix/*.css')
     .pipe(autoprefixer({
-      browsers: ['last 15 versions'],
-      cascade: false
+      browsers: ['last 15 versions']
     }))
     .pipe(gulp.dest('app/css'));
 });
 
-// watch style sass
+// watch for files
 gulp.task('watch', function(){
-  gulp.watch('app/sass/**/*.css', ['style']);
+  gulp.watch('app/noprefix/*.css', ['style']);
+  gulp.watch('app/images/*', ['image']);
 });
 
 // default start

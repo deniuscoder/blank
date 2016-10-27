@@ -4,11 +4,11 @@
   "description": "The empty project for web development",
   "main": "index.js",
   "scripts": {
-    "test": "Hello world"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "blank"
+    "url": "https://github.com/deniuscoder/blank"
   },
   "author": "Denius Coder",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "gulp-autoprefixer": "^3.1.1",
     "gulp-csso": "^2.0.0",
     "gulp-if": "^2.0.1",
+    "gulp-image": "^2.7.2",
     "gulp-server-livereload": "^1.9.0",
     "gulp-uglify": "^2.0.0",
     "gulp-useref": "^3.1.2"
